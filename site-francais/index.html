@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Français — Cours, méthodes et exposés</title>
+  <meta name="description" content="Tous les cours, méthodes et exposés de français de la classe, au même endroit.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="logo" href="index.html"><span class="logo-mark">¶</span> Français</a>
+      <nav class="main-nav" aria-label="Catégories">
+        <a href="#cours" data-filtre="cours">Cours</a>
+        <a href="#methodes" data-filtre="methodes">Méthodes</a>
+        <a href="#exposes" data-filtre="exposes">Exposés</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <p class="eyebrow">Le classeur de la classe</p>
+        <h1>Tous nos cours, méthodes et exposés de français</h1>
+        <p class="lead">Révise une notion, retrouve une méthode avant un devoir ou relis l'exposé d'un camarade.</p>
+        <label class="search">
+          <span class="visually-hidden">Rechercher</span>
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <input id="recherche" type="search" placeholder="Rechercher : métaphore, dissertation, Baudelaire…" autocomplete="off">
+        </label>
+      </div>
+    </section>
+
+    <section class="wrap">
+      <div class="tabs" role="tablist" aria-label="Filtrer par catégorie">
+        <button role="tab" data-filtre="tout" aria-selected="true">Tout <span class="count" data-count="tout"></span></button>
+        <button role="tab" data-filtre="cours" aria-selected="false">Cours <span class="count" data-count="cours"></span></button>
+        <button role="tab" data-filtre="methodes" aria-selected="false">Méthodes <span class="count" data-count="methodes"></span></button>
+        <button role="tab" data-filtre="exposes" aria-selected="false">Exposés <span class="count" data-count="exposes"></span></button>
+      </div>
+      <div id="liste" class="grid" aria-live="polite"></div>
+      <p id="vide" class="empty" hidden>Aucun résultat. Essaie un autre mot.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">Site de la classe · Pour ajouter un cours ou un exposé, voir le fichier <code>README.md</code>.</div>
+  </footer>
+
+  <script src="assets/contenu.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
